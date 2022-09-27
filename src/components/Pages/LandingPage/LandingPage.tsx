@@ -11,10 +11,6 @@ const LandingPageContainer = styled.div`
     flex-direction: column;
     align-items:center;
 
-    @media ${devices.mobile} {
-        
-    }
-
     @media ${devices.laptop} {
         padding: 60px 160px;
         justify-content: space-between;
