@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
+import { color } from '../../../styles/variables';
 
-import { color } from '../../styles/variables'
-
-const { darkPurple, neutrals3 } = color;
+const { darkPurple, neutrals4 } = color;
 
 interface EventInfoContainerProps {
     title: string;
@@ -23,7 +22,7 @@ const Header = styled.h3`
 `;
 
 const Optional = styled.span`
-  color: ${neutrals3};
+  color: ${neutrals4};
   font-weight: 100;
 `
 
