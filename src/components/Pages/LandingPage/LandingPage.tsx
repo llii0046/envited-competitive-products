@@ -1,16 +1,18 @@
 import { useEffect, useState } from 'react';
-import styled from 'styled-components';
-import LandingPageImage from '../../../assets/landing-page-image.svg';
-import { color, devices, sizes } from '../../../styles/variables';
 import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
+
+import LandingPageImage from '../../../assets/landing-page-image.svg';
 import { ERouterType } from '../../../constant/router';
+import { color, devices, sizes } from '../../../styles/variables';
 import Button from '../../Shares/Button';
+
 const { darkPurple, lightPurple, neutrals1, envitedPurple, envitedPink } = color;
 
 const LandingPageContainer = styled.div`
+	align-items: center;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 
 	@media ${devices.laptop} {
 		padding: 60px 160px;
@@ -20,10 +22,10 @@ const LandingPageContainer = styled.div`
 `;
 
 const Pitch = styled.h2`
-	font-size: 36px;
 	color: ${darkPurple};
-	width: 200px;
+	font-size: 36px;
 	margin-bottom: 0;
+	width: 200px;
 
 	@media ${devices.mobile} {
 		font-size: 64px;
@@ -44,18 +46,18 @@ const Description = styled.p`
 `;
 
 const Emphasis = styled.strong`
-	color: ${lightPurple};
-	background: linear-gradient(90deg, ${envitedPurple} 24.2%, ${envitedPink} 120.46%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+	background: linear-gradient(90deg, ${envitedPurple} 24.2%, ${envitedPink} 120.46%);
 	background-clip: text;
+	color: ${lightPurple};
 	text-fill-color: transparent;
 `;
 
 const ContentWrapper = styled.div`
+	align-items: center;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	text-align: center;
 	width: 600px;
 
@@ -66,9 +68,9 @@ const ContentWrapper = styled.div`
 `;
 
 const ShowCase = styled.div`
+	align-items: center;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	justify-content: center;
 
 	@media ${devices.laptop} {

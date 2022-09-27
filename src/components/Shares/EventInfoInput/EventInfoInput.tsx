@@ -13,14 +13,14 @@ interface JobAdInputProps {
 }
 
 const Input = styled.input`
+	background-color: ${neutrals5};
 	border: 1px solid transparent;
 	border-radius: 10px;
+	color: ${darkPurple};
 	font-size: 20px;
-	background-color: ${neutrals5};
+	outline: none;
 	padding: 16px;
 	width: 100%;
-	outline: none;
-	color: ${darkPurple};
 
 	::placeholder {
 		color: ${neutrals4};

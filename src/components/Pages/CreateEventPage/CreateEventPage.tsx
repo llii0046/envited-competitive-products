@@ -1,11 +1,12 @@
-import EventInfoContainer from '../../Shares/EventInfoContainer';
-import styled from 'styled-components';
-import { color } from '../../../styles/variables';
-import EventInfoInput from '../../Shares/EventInfoInput';
 import { useState } from 'react';
-import { ERouterType } from '../../../constant/router';
 import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
+
+import { ERouterType } from '../../../constant/router';
+import { color } from '../../../styles/variables';
 import Button from '../../Shares/Button';
+import EventInfoContainer from '../../Shares/EventInfoContainer';
+import EventInfoInput from '../../Shares/EventInfoInput';
 
 const { darkPurple } = color;
 
@@ -40,15 +41,15 @@ const CreateEventPage = () => {
 				/>
 			</EventInfoContainer>
 
-			<EventInfoContainer title="Host name"></EventInfoContainer>
+			<EventInfoContainer title="Host name" />
 
-			<EventInfoContainer title="Start time"></EventInfoContainer>
+			<EventInfoContainer title="Start time" />
 
-			<EventInfoContainer title="End time" isOptional={true}></EventInfoContainer>
+			<EventInfoContainer title="End time" isOptional />
 
-			<EventInfoContainer title="Location"></EventInfoContainer>
+			<EventInfoContainer title="Location" />
 
-			<EventInfoContainer title="EventPhoto" isOptional={true}></EventInfoContainer>
+			<EventInfoContainer title="EventPhoto" isOptional />
 
 			<Button buttonText="Submit" onClick={handleClick} />
 		</Container>

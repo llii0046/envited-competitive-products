@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import { color, devices } from '../../../styles/variables';
 
 const { envitedPurple, envitedPink, whiteColor } = color;
@@ -9,15 +10,15 @@ interface ButtonProps {
 }
 
 const StyleButton = styled.button`
-	color: ${whiteColor};
-	font-size: 20px;
-	width: 180px;
-	height: 55px;
 	background: linear-gradient(90deg, ${envitedPurple} 3.25%, ${envitedPink} 100%);
-	border-radius: 10px;
 	border: 1px solid transparent;
+	border-radius: 10px;
+	color: ${whiteColor};
 	cursor: pointer;
+	font-size: 20px;
+	height: 55px;
 	margin-top: 50px;
+	width: 180px;
 
 	@media ${devices.mobile} {
 		width: 320px;
