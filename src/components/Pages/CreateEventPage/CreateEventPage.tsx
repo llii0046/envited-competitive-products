@@ -73,7 +73,7 @@ const CreateEventPage = () => {
 
 			<EventInfoContainer title="EventPhoto" isOptional />
 
-			<Button buttonText="Submit" onClick={handleClick} />
+			<Button buttonText="Next" onClick={handleClick} />
 		</Container>
 	);
 };
