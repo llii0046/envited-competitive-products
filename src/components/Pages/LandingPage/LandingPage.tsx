@@ -125,7 +125,7 @@ const LandingPage = () => {
         checkLaptop();
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
-    }, []);
+    }, [window.innerWidth]);
 
     return (
         <LandingPageContainer>
