@@ -1,1 +1,1 @@
-export {default} from './EventInfoInput';
+export { default } from './EventInfoInput';

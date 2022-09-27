@@ -5,9 +5,9 @@ import { color } from '../../../styles/variables';
 const { darkPurple, neutrals4 } = color;
 
 interface EventInfoContainerProps {
-    title: string;
-    children?: React.ReactNode;
-    isOptional?: boolean;
+	title: string;
+	children?: React.ReactNode;
+	isOptional?: boolean;
 }
 
 const Container = styled.div`
@@ -22,18 +22,20 @@ const Header = styled.h3`
 `;
 
 const Optional = styled.span`
-  color: ${neutrals4};
-  font-weight: 100;
-`
+	color: ${neutrals4};
+	font-weight: 100;
+`;
 
 const EventInfoContainer: React.FC<EventInfoContainerProps> = props => {
-    const { children, title, isOptional = false } = props;
-    return (
-        <Container>
-            <Header>{title} {isOptional && <Optional>(optional)</Optional>}</Header>
-            {children}
-        </Container>
-    );
+	const { children, title, isOptional = false } = props;
+	return (
+		<Container>
+			<Header>
+				{title} {isOptional && <Optional>(optional)</Optional>}
+			</Header>
+			{children}
+		</Container>
+	);
 };
 
 export default EventInfoContainer;

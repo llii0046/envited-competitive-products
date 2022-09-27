@@ -1,4 +1,4 @@
 export enum ERouterType {
-   EVENT ='event',
-   CREATE_EVENT ='create'
+	EVENT = 'event',
+	CREATE_EVENT = 'create'
 }
