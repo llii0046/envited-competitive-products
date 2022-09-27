@@ -46,12 +46,12 @@ const Description = styled.p`
 `;
 
 const Emphasis = styled.strong`
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background: linear-gradient(90deg, ${envitedPurple} 24.2%, ${envitedPink} 120.46%);
-	background-clip: text;
-	color: ${lightPurple};
-	text-fill-color: transparent;
+    color: ${lightPurple};
+    background: linear-gradient(90deg, ${envitedPurple} 24.2%, ${envitedPink} 120.46%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 `;
 
 const ContentWrapper = styled.div`
