@@ -49,7 +49,7 @@
 			{ "extensions": [".js", ".jsx", ".ts", ".tsx", ".d.ts"] }
 		],
 		"prettier/prettier": [
-			"error",
+			"off",
 			{
 				"tabWidth": 4,
 				"useTabs": true,
