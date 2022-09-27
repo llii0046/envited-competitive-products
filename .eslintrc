@@ -39,6 +39,7 @@
 		"no-restricted-exports": "off",
 		"react/react-in-jsx-scope": "off",
 		"import/no-unresolved": "off",
+		"import/prefer-default-export": "off",
 		"react/jsx-props-no-spreading": "off",
 		"@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
 		"no-console": "warn",
@@ -91,7 +92,7 @@
 		"import/no-duplicates": "error",
 		"sort-imports": ["error", { "ignoreDeclarationSort": true }],
 		"import/order": [
-			"error",
+			"off",
 			{
 				"groups": ["builtin", "external", "parent"],
 				"newlines-between": "always",
