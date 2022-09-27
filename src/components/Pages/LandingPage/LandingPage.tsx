@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import LandingPageImage from '../../../assets/landing-page-image.svg';
 import { color, devices, sizes } from '../../../styles/variables';
+import { useNavigate } from "react-router-dom";
+import { ERouterType } from '../../../constant/router';
 
 const { darkPurple, lightPurple, neutrals1, envitedPurple, envitedPink, whiteColor } = color;
 
@@ -108,6 +110,7 @@ const LandingPage = () => {
     const [isLaptop, setIsLaptop] = useState<boolean>(true);
     const description = 'Easily host and share events with your friends across any social media.';
     const buttonText = 'Create my event';
+    const router = useNavigate(); 
     const checkLaptop = () => {
         if (window.innerWidth > sizes.laptop) {
             setIsLaptop(true);
@@ -127,6 +130,10 @@ const LandingPage = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, [window.innerWidth]);
 
+    const handleClick = () => {
+        router(ERouterType.CREATE_EVENT);
+    }
+
     return (
         <LandingPageContainer>
             {isLaptop
@@ -138,7 +145,7 @@ const LandingPage = () => {
                                 <Pitch>Image if <Emphasis>SnapChat</Emphasis> had events.</Pitch>
                                 <Description>{description}</Description>
                             </ContentWrapper>
-                            <Button>{buttonText}</Button>
+                            <Button onClick={handleClick}>{buttonText}</Button>
                         </ShowCase>
                     </>
                 )
@@ -149,7 +156,7 @@ const LandingPage = () => {
                             <Description>{description}</Description>
                         </ContentWrapper>
                         <Image src={LandingPageImage} alt='Landing Page Image' />
-                        <Button>{buttonText}</Button>
+                        <Button onClick={handleClick}>{buttonText}</Button>
                     </>
                 )
             }
