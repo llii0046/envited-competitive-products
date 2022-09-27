@@ -5,6 +5,7 @@ import EventInfoInput from "../../Shares/EventInfoInput";
 import { useState } from "react";
 import { ERouterType } from "../../../constant/router";
 import { useNavigate } from "react-router-dom";
+import Button from "../../Shares/Button";
 
 const { darkPurple } = color;
 
@@ -61,7 +62,7 @@ const CreateEventPage = () => {
 
       </EventInfoContainer>
 
-      <button onClick={handleClick}> Submit</button>
+      <Button buttonText="Submit" onClick={handleClick} />
     </Container>
   )
 }

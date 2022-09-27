@@ -5,8 +5,8 @@ import LandingPageImage from '../../../assets/landing-page-image.svg';
 import { color, devices, sizes } from '../../../styles/variables';
 import { useNavigate } from "react-router-dom";
 import { ERouterType } from '../../../constant/router';
-
-const { darkPurple, lightPurple, neutrals1, envitedPurple, envitedPink, whiteColor } = color;
+import Button from '../../Shares/Button';
+const { darkPurple, lightPurple, neutrals1, envitedPurple, envitedPink} = color;
 
 const LandingPageContainer = styled.div`
     display: flex;
@@ -67,22 +67,6 @@ const ContentWrapper = styled.div`
 	}
 `
 
-const Button = styled.button`
-    font-size: 20px;
-    color: ${whiteColor};
-    width: 180px;
-    height: 55px;
-    background: linear-gradient(90deg, ${envitedPurple} 3.25%, ${envitedPink} 100%);
-    border-radius: 10px;    
-    border:1px solid transparent;
-    cursor: pointer;
-    margin-top: 50px;
-
-    @media ${devices.mobile} {
-        width: 320px;
-    }
-`
-
 const ShowCase = styled.div`
     display: flex;
     flex-direction: column;
@@ -110,7 +94,7 @@ const LandingPage = () => {
     const [isLaptop, setIsLaptop] = useState<boolean>(true);
     const description = 'Easily host and share events with your friends across any social media.';
     const buttonText = 'Create my event';
-    const router = useNavigate(); 
+    const router = useNavigate();
     const checkLaptop = () => {
         if (window.innerWidth > sizes.laptop) {
             setIsLaptop(true);
@@ -145,7 +129,7 @@ const LandingPage = () => {
                                 <Pitch>Image if <Emphasis>SnapChat</Emphasis> had events.</Pitch>
                                 <Description>{description}</Description>
                             </ContentWrapper>
-                            <Button onClick={handleClick}>{buttonText}</Button>
+                            <Button buttonText={buttonText} onClick={handleClick} />
                         </ShowCase>
                     </>
                 )
@@ -156,7 +140,7 @@ const LandingPage = () => {
                             <Description>{description}</Description>
                         </ContentWrapper>
                         <Image src={LandingPageImage} alt='Landing Page Image' />
-                        <Button onClick={handleClick}>{buttonText}</Button>
+                        <Button buttonText={buttonText} onClick={handleClick} />
                     </>
                 )
             }
