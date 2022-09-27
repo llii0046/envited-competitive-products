@@ -39,6 +39,7 @@ const color: IColor = {
     neutrals4: '#E0E0E0',
     neutrals5: '#F2F2F2',
     neutrals6: '#BDBDBD',
+    whiteColor: '#FFF',
 };
 
 export { color, devices, sizes };
